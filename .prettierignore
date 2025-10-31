@@ -1,0 +1,56 @@
+# Dependencies
+node_modules/
+.expo/
+dist/
+build/
+
+# Production
+*.min.js
+*.min.css
+
+# Generated files
+*.generated.*
+*.d.ts
+
+# Environment variables
+.env
+.env.local
+.env.production
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Mobile platform files
+ios/
+android/
+
+# Temporary folders
+tmp/
+temp/

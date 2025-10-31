@@ -1,0 +1,180 @@
+{
+  "expo": {
+    "name": "AfriMed - AI Medical Assistant",
+    "slug": "afrimed",
+    "version": "1.0.0",
+    "android": {
+      "package": "com.anonymous.afrimed"
+    }
+  },
+  "assetBundlePatterns": [
+    "**/*"
+  ],
+  "ios": {
+    "supportsTablet": true,
+    "bundleIdentifier": "com.afrimed.app",
+    "buildNumber": "1",
+    "infoPlist": {
+      "NSCameraUsageDescription": "AfriMed needs camera access to capture medical scans and documents for AI analysis.",
+      "NSPhotoLibraryUsageDescription": "AfriMed needs photo library access to upload medical scans and documents for analysis.",
+      "NSPhotoLibraryAddUsageDescription": "AfriMed needs permission to save processed medical images and reports.",
+      "NSMicrophoneUsageDescription": "AfriMed needs microphone access for video consultations with healthcare professionals.",
+      "NSLocationWhenInUseUsageDescription": "AfriMed uses your location to find nearby clinics and healthcare providers.",
+      "ITSAppUsesNonExemptEncryption": false,
+      "UIBackgroundModes": [
+        "remote-notification"
+      ]
+    },
+    "config": {
+      "usesNonExemptEncryption": false
+    },
+    "associatedDomains": [
+      "applinks:afrimed.app"
+    ]
+  },
+  "android": {
+    "package": "com.afrimed.app",
+    "versionCode": 1,
+    "adaptiveIcon": {
+      "foregroundImage": "./assets/images/adaptive-icon.png",
+      "backgroundColor": "#0A0F1C"
+    },
+    "permissions": [
+      "CAMERA",
+      "READ_EXTERNAL_STORAGE",
+      "WRITE_EXTERNAL_STORAGE",
+      "RECORD_AUDIO",
+      "ACCESS_FINE_LOCATION",
+      "ACCESS_COARSE_LOCATION",
+      "android.permission.ACCESS_NETWORK_STATE",
+      "android.permission.INTERNET",
+      "android.permission.VIBRATE",
+      "android.permission.WAKE_LOCK"
+    ],
+    "intentFilters": [
+      {
+        "action": "VIEW",
+        "data": [
+          {
+            "scheme": "afrimed"
+          }
+        ],
+        "category": [
+          "BROWSABLE",
+          "DEFAULT"
+        ]
+      }
+    ]
+  },
+  "web": {
+    "bundler": "metro",
+    "output": "single",
+    "favicon": "./assets/images/favicon.png",
+    "name": "AfriMed Web",
+    "shortName": "AfriMed",
+    "lang": "en",
+    "scope": "/",
+    "themeColor": "#00D4FF",
+    "backgroundColor": "#0A0F1C",
+    "display": "standalone",
+    "orientation": "portrait"
+  },
+  "plugins": [
+    "expo-router",
+    "expo-font",
+    "expo-secure-store",
+    [
+      "expo-camera",
+      {
+        "cameraPermission": "Allow AfriMed to access your camera to capture medical scans."
+      }
+    ],
+    [
+      "expo-image-picker",
+      {
+        "photosPermission": "Allow AfriMed to access your photos to upload medical documents.",
+        "cameraPermission": "Allow AfriMed to access your camera to capture medical scans."
+      }
+    ],
+    [
+      "expo-location",
+      {
+        "locationAlwaysAndWhenInUsePermission": "Allow AfriMed to access your location to find nearby clinics."
+      }
+    ],
+    [
+      "expo-notifications",
+      {
+        "icon": "./assets/images/notification-icon.png",
+        "color": "#00D4FF",
+        "defaultChannel": "default",
+        "sounds": [
+          "./assets/sounds/notification.wav"
+        ]
+      }
+    ],
+    [
+      "expo-document-picker",
+      {
+        "iCloudContainerEnvironment": "Production"
+      }
+    ],
+    [
+      "expo-build-properties",
+      {
+        "ios": {
+          "deploymentTarget": "13.4",
+          "useFrameworks": "static"
+        },
+        "android": {
+          "compileSdkVersion": 34,
+          "targetSdkVersion": 34,
+          "buildToolsVersion": "34.0.0",
+          "enableProguardInReleaseBuilds": true,
+          "enableShrinkResourcesInReleaseBuilds": true
+        }
+      }
+    ]
+  ],
+  "extra": {
+    "eas": {
+      "projectId": "your-project-id-here"
+    },
+    "supabaseUrl": "your-supabase-url-here",
+    "supabaseAnonKey": "your-supabase-anon-key-here",
+    "aiApiKey": "your-ai-api-key-here",
+    "hederaOperatorAccount": "your-hedera-operator-account",
+    "hederaOperatorPrivateKey": "your-hedera-operator-private-key",
+    "stripePublishableKey": "your-stripe-publishable-key",
+    "environment": "development"
+  },
+  "runtimeVersion": {
+    "policy": "sdkVersion"
+  },
+  "updates": {
+    "url": "https://u.expo.dev/your-project-id-here",
+    "fallbackToCacheTimeout": 0,
+    "enabled": true
+  },
+  "experiments": {
+    "typedRoutes": true,
+    "tsconfigPaths": true,
+    "turboModules": true
+  },
+  "owner": "afrimed-team",
+  "description": "AI-powered medical assistance platform providing scan analysis, donation funding, and healthcare access across Africa.",
+  "githubUrl": "https://github.com/Abdou05jr",
+  "privacy": "public",
+  "platforms": [
+    "ios",
+    "android",
+    "web"
+  ],
+  "notification": {
+    "icon": "./assets/images/notification-icon.png",
+    "color": "#00D4FF",
+    "iosDisplayInForeground": true,
+    "androidMode": "default",
+    "androidCollapsedTitle": "AfriMed Updates"
+  }
+}
